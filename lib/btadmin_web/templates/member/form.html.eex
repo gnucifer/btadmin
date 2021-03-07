@@ -1,0 +1,87 @@
+<%= form_for @changeset, @action, fn f -> %>
+  <%= if @changeset.action do %>
+    <div class="alert alert-danger">
+      <p>Oops, something went wrong! Please check the errors below.</p>
+    </div>
+  <% end %>
+
+  <%= label f, :seasons %>
+  <%= text_input f, :seasons %>
+  <%= error_tag f, :seasons %>
+
+  <%= label f, :member_role %>
+  <%= text_input f, :member_role %>
+  <%= error_tag f, :member_role %>
+
+  <%= label f, :first_name %>
+  <%= text_input f, :first_name %>
+  <%= error_tag f, :first_name %>
+
+  <%= label f, :last_name %>
+  <%= text_input f, :last_name %>
+  <%= error_tag f, :last_name %>
+
+  <%= label f, :address %>
+  <%= text_input f, :address %>
+  <%= error_tag f, :address %>
+
+  <%= label f, :postal_code %>
+  <%= text_input f, :postal_code %>
+  <%= error_tag f, :postal_code %>
+
+  <%= label f, :city %>
+  <%= text_input f, :city %>
+  <%= error_tag f, :city %>
+
+  <%= label f, :phone %>
+  <%= text_input f, :phone %>
+  <%= error_tag f, :phone %>
+
+  <%= label f, :email %>
+  <%= text_input f, :email %>
+  <%= error_tag f, :email %>
+
+  <%= label f, :join_date %>
+  <%= date_select f, :join_date %>
+  <%= error_tag f, :join_date %>
+
+  <%= label f, :notes %>
+  <%= textarea f, :notes %>
+  <%= error_tag f, :notes %>
+
+  <%= label f, :board_terms %>
+  <%= text_input f, :board_terms %>
+  <%= error_tag f, :board_terms %>
+
+  <%= label f, :print_options %>
+  <%= text_input f, :print_options %>
+  <%= error_tag f, :print_options %>
+
+  <%= label f, :gdpr_option %>
+  <%= text_input f, :gdpr_option %>
+  <%= error_tag f, :gdpr_option %>
+
+  <%= label f, :gdpr_hide_name %>
+  <%= checkbox f, :gdpr_hide_name %>
+  <%= error_tag f, :gdpr_hide_name %>
+
+  <%= label f, :gdpr_hide_address %>
+  <%= checkbox f, :gdpr_hide_address %>
+  <%= error_tag f, :gdpr_hide_address %>
+
+  <%= label f, :gdpr_hide_phone %>
+  <%= checkbox f, :gdpr_hide_phone %>
+  <%= error_tag f, :gdpr_hide_phone %>
+
+  <%= label f, :gdpr_hide_email %>
+  <%= checkbox f, :gdpr_hide_email %>
+  <%= error_tag f, :gdpr_hide_email %>
+
+  <%= label f, :gdpr_hide_photos %>
+  <%= checkbox f, :gdpr_hide_photos %>
+  <%= error_tag f, :gdpr_hide_photos %>
+
+  <div>
+    <%= submit "Save" %>
+  </div>
+<% end %>

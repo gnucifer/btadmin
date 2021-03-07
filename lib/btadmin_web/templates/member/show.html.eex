@@ -1,0 +1,103 @@
+<h1>Show Member</h1>
+
+<ul>
+
+  <li>
+    <strong>Seasons:</strong>
+    <%= @member.seasons %>
+  </li>
+
+  <li>
+    <strong>Member role:</strong>
+    <%= @member.member_role %>
+  </li>
+
+  <li>
+    <strong>First name:</strong>
+    <%= @member.first_name %>
+  </li>
+
+  <li>
+    <strong>Last name:</strong>
+    <%= @member.last_name %>
+  </li>
+
+  <li>
+    <strong>Address:</strong>
+    <%= @member.address %>
+  </li>
+
+  <li>
+    <strong>Postal code:</strong>
+    <%= @member.postal_code %>
+  </li>
+
+  <li>
+    <strong>City:</strong>
+    <%= @member.city %>
+  </li>
+
+  <li>
+    <strong>Phone:</strong>
+    <%= @member.phone %>
+  </li>
+
+  <li>
+    <strong>Email:</strong>
+    <%= @member.email %>
+  </li>
+
+  <li>
+    <strong>Join date:</strong>
+    <%= @member.join_date %>
+  </li>
+
+  <li>
+    <strong>Notes:</strong>
+    <%= @member.notes %>
+  </li>
+
+  <li>
+    <strong>Board terms:</strong>
+    <%= @member.board_terms %>
+  </li>
+
+  <li>
+    <strong>Print options:</strong>
+    <%= @member.print_options %>
+  </li>
+
+  <li>
+    <strong>Gdpr option:</strong>
+    <%= @member.gdpr_option %>
+  </li>
+
+  <li>
+    <strong>Gdpr hide name:</strong>
+    <%= @member.gdpr_hide_name %>
+  </li>
+
+  <li>
+    <strong>Gdpr hide address:</strong>
+    <%= @member.gdpr_hide_address %>
+  </li>
+
+  <li>
+    <strong>Gdpr hide phone:</strong>
+    <%= @member.gdpr_hide_phone %>
+  </li>
+
+  <li>
+    <strong>Gdpr hide email:</strong>
+    <%= @member.gdpr_hide_email %>
+  </li>
+
+  <li>
+    <strong>Gdpr hide photos:</strong>
+    <%= @member.gdpr_hide_photos %>
+  </li>
+
+</ul>
+
+<span><%= link "Edit", to: Routes.member_path(@conn, :edit, @member) %></span>
+<span><%= link "Back", to: Routes.member_path(@conn, :index) %></span>

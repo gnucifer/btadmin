@@ -1,0 +1,28 @@
+<h1>Show Plot lease</h1>
+
+<ul>
+
+  <li>
+    <strong>Start date:</strong>
+    <%= @plot_lease.start_date %>
+  </li>
+
+  <li>
+    <strong>End date:</strong>
+    <%= @plot_lease.end_date %>
+  </li>
+
+  <li>
+    <strong>Season year:</strong>
+    <%= @plot_lease.season_year %>
+  </li>
+
+  <li>
+    <strong>Is paid:</strong>
+    <%= @plot_lease.is_paid %>
+  </li>
+
+</ul>
+
+<span><%= link "Edit", to: Routes.plot_lease_path(@conn, :edit, @plot_lease) %></span>
+<span><%= link "Back", to: Routes.plot_lease_path(@conn, :index) %></span>

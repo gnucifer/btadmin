@@ -1,0 +1,32 @@
+<h1>Listing Plots</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Number</th>
+      <th>Area</th>
+      <th>Fee</th>
+      <th>Notes</th>
+
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+<%= for plot <- @plots do %>
+    <tr>
+      <td><%= plot.number %></td>
+      <td><%= plot.area %></td>
+      <td><%= plot.fee %></td>
+      <td><%= plot.notes %></td>
+
+      <td>
+        <span><%= link "Show", to: Routes.plot_path(@conn, :show, plot) %></span>
+        <span><%= link "Edit", to: Routes.plot_path(@conn, :edit, plot) %></span>
+        <span><%= link "Delete", to: Routes.plot_path(@conn, :delete, plot), method: :delete, data: [confirm: "Are you sure?"] %></span>
+      </td>
+    </tr>
+<% end %>
+  </tbody>
+</table>
+
+<span><%= link "New Plot", to: Routes.plot_path(@conn, :new) %></span>

@@ -1,0 +1,28 @@
+<h1>Show Plot</h1>
+
+<ul>
+
+  <li>
+    <strong>Number:</strong>
+    <%= @plot.number %>
+  </li>
+
+  <li>
+    <strong>Area:</strong>
+    <%= @plot.area %>
+  </li>
+
+  <li>
+    <strong>Fee:</strong>
+    <%= @plot.fee %>
+  </li>
+
+  <li>
+    <strong>Notes:</strong>
+    <%= @plot.notes %>
+  </li>
+
+</ul>
+
+<span><%= link "Edit", to: Routes.plot_path(@conn, :edit, @plot) %></span>
+<span><%= link "Back", to: Routes.plot_path(@conn, :index) %></span>

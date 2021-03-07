@@ -1,0 +1,32 @@
+<h1>Listing Plot leases</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Start date</th>
+      <th>End date</th>
+      <th>Season year</th>
+      <th>Is paid</th>
+
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+<%= for plot_lease <- @plot_leases do %>
+    <tr>
+      <td><%= plot_lease.start_date %></td>
+      <td><%= plot_lease.end_date %></td>
+      <td><%= plot_lease.season_year %></td>
+      <td><%= plot_lease.is_paid %></td>
+
+      <td>
+        <span><%= link "Show", to: Routes.plot_lease_path(@conn, :show, plot_lease) %></span>
+        <span><%= link "Edit", to: Routes.plot_lease_path(@conn, :edit, plot_lease) %></span>
+        <span><%= link "Delete", to: Routes.plot_lease_path(@conn, :delete, plot_lease), method: :delete, data: [confirm: "Are you sure?"] %></span>
+      </td>
+    </tr>
+<% end %>
+  </tbody>
+</table>
+
+<span><%= link "New Plot lease", to: Routes.plot_lease_path(@conn, :new) %></span>

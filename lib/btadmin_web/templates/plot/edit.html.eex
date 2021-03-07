@@ -1,0 +1,5 @@
+<h1>Edit Plot</h1>
+
+<%= render "form.html", Map.put(assigns, :action, Routes.plot_path(@conn, :update, @plot)) %>
+
+<span><%= link "Back", to: Routes.plot_path(@conn, :index) %></span>

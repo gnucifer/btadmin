@@ -1,0 +1,8 @@
+<section class="row">
+  <article class="column">
+    <h2>Resources</h2>
+    <ul>
+      <li><%= link "Lotter", to: BtadminWeb.Router.Helpers.plot_path(@conn, :index) %></li>
+    </ul>
+  </article>
+</section>
